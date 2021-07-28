@@ -8,3 +8,8 @@
 <li> command line "php artisan serve"</li>
 <li> open browser: http://localhost:3000</li>
 </ol>
+
+<p> Demo: </p>
+<p> <a href="https://fitrafadilana.com"> https://fitrafadilana.com </a> <p>
+<p>username : admin </p>
+<p>password : admin </p>
