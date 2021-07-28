@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class TimeSlot extends Model
 {
     use HasFactory;
+
     protected $fillable = [
-        'order_code',
+        'name',
+        'time',
         'status',
-        'table_number',
-        'is_paid',
-        'creatd_by',
     ];
 }

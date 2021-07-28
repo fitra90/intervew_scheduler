@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StuffsController;
-use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\SchedulesController;
+use App\Http\Controllers\CandidatesController;
 use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
@@ -14,28 +14,26 @@ use App\Http\Controllers\UsersController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// 
-//  stuff CRUD
-//
-Route::get('/stuffs', [StuffsController::class, 'viewAll']);
-Route::get('/new-stuff', [StuffsController::class, 'viewNew']);
-Route::post('/save-new-stuff', [StuffsController::class, 'saveNew']);
-Route::post('/save-edit-stuff/{id}', [StuffsController::class, 'saveEdit']);
-Route::get('/edit-stuff/{id}', [StuffsController::class, 'viewEdit']);
-Route::get('/single-stuff/{id}', [StuffsController::class, 'viewSingle']);
-Route::delete('/delete-stuff/{id}', [StuffsController::class, 'delete']);
-Route::get('/menu', [StuffsController::class, 'viewMenu']);
 
 // 
-//  order CRUD
+//  Schedule CRUD
 //
-Route::get('/orders', [OrdersController::class, 'viewAll']);
-Route::get('/new-order', [OrdersController::class, 'viewNew']);
-Route::post('/save-new-order', [OrdersController::class, 'saveNew']);
-Route::post('/save-edit-order/{id}', [OrdersController::class, 'saveEdit']);
-Route::get('/edit-order/{id}', [OrdersController::class, 'viewEdit']);
-Route::delete('/delete-order/{id}', [OrdersController::class, 'delete']);
-Route::get('/last-order', [OrdersController::class, 'lastOrder']);
+Route::get('/schedules', [SchedulesController::class, 'viewAll']);
+Route::get('/new-schedule', [SchedulesController::class, 'viewNew']);
+Route::post('/save-new-schedule', [SchedulesController::class, 'saveNew']);
+Route::post('/save-edit-schedule/{id}', [SchedulesController::class, 'saveEdit']);
+Route::get('/edit-schedule/{id}', [SchedulesController::class, 'viewEdit']);
+Route::delete('/delete-schedule/{id}', [SchedulesController::class, 'delete']);
+
+// 
+//  candidates CRUD
+//
+Route::get('/candidates', [CandidatesController::class, 'viewAll']);
+Route::get('/new-candidate', [CandidatesController::class, 'viewNew']);
+Route::post('/save-new-candidate', [CandidatesController::class, 'saveNew']);
+Route::post('/save-edit-candidate/{id}', [CandidatesController::class, 'saveEdit']);
+Route::get('/edit-candidate/{id}', [CandidatesController::class, 'viewEdit']);
+Route::delete('/delete-candidate/{id}', [CandidatesController::class, 'delete']);
 
 // 
 //  user CRUD
