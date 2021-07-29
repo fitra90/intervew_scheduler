@@ -18,7 +18,7 @@ use App\Http\Controllers\UsersController;
 // 
 //  Schedule CRUD
 //
-Route::get('/schedules', [SchedulesController::class, 'viewAll']);
+Route::get('/', [SchedulesController::class, 'viewAll']);
 Route::get('/new-schedule', [SchedulesController::class, 'viewNew']);
 Route::post('/save-new-schedule', [SchedulesController::class, 'saveNew']);
 Route::post('/save-edit-schedule/{id}', [SchedulesController::class, 'saveEdit']);
@@ -38,7 +38,6 @@ Route::delete('/delete-candidate/{id}', [CandidatesController::class, 'delete'])
 // 
 //  user CRUD
 //
-Route::get('/', [UsersController::class, 'home']);
 Route::get('/users', [UsersController::class, 'viewAll']);
 Route::get('/new-user', [UsersController::class, 'viewNew']);
 Route::post('/save-new-user', [UsersController::class, 'saveNew']);

@@ -101,22 +101,22 @@
 						<div class="nano-content">
 							<nav id="menu" class="nav-main" role="navigation">
 								<ul class="nav nav-main">
-									<li {!! Request::segment(1) == "menu" ?  "class='nav-active'" : "" !!}>
-										<a href="/menu">
+									<li {!! Request::segment(1) == "" ?  "class='nav-active'" : "" !!}>
+										<a href="/">
                                             <i class="fa fa-table" aria-hidden="true"></i>
-											<span>Menu</span>
+											<span>Schedules</span>
 										</a>
 									</li>
-									<li {!! Request::segment(1) == "stuffs" || Request::segment(1) == "new-stuff" || Request::segment(1) == "edit-stuff"?  "class='nav-active'" : "" !!}>
-										<a href="/stuffs">
+									<li {!! Request::segment(1) == "slots" || Request::segment(1) == "new-slot" || Request::segment(1) == "edit-slot"?  "class='nav-active'" : "" !!}>
+										<a href="/slots">
                                             <i class="fa fa-table" aria-hidden="true"></i>
-											<span>Master Menu</span>
+											<span>Time Slot</span>
 										</a>
 									</li>
-									<li {!! Request::segment(1) == "orders" || Request::segment(1) == "new-order" || Request::segment(1) == "edit-order"?  "class='nav-active'" : "" !!}>
-										<a href="/orders">
+									<li {!! Request::segment(1) == "candidates" || Request::segment(1) == "new-candidate" || Request::segment(1) == "edit-candidate"?  "class='nav-active'" : "" !!}>
+										<a href="/candidates">
                                             <i class="fa fa-table" aria-hidden="true"></i>
-											<span>Orders</span>
+											<span>Candidates</span>
 										</a>
 									</li>
 									@if(Session::get('role') == 1)
